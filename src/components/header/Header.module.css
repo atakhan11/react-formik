@@ -1,38 +1,118 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .header {
     display: flex;
     align-items: center;
-    gap: 60px;
-    padding: 20px 30px 20px 30px;
-    justify-content: space-evenly;
-}
-
-.headerlogo {
-    display: flex;
+    padding: 10px 20px;
+    width: 100%;
+    justify-content: center;
     
-}
+  }
 
-.headernavitem{
+  .headerr {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: 75%;
+    margin-right: 120px;
+  }
+  
+  .headerlogo {
+    flex: 1;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Default desktop nav */
+  .headernav {
+    flex: 2;
+  }
+  
+  .headernavlist {
+    display: flex;
+    justify-content: center;
     list-style: none;
-}
-
-.headernavicon{
-  list-style: none;
-  color: blue;
-  font-size: 20px;
-}
-
-.headernavlist {
+    gap: 70px;
+  }
+  
+  .headernavitem a, .headernavitem {
+    text-decoration: none;
+    color: gray;
+    font-size: 18px;
+  }
+  
+  .headericons {
+    flex: 1;
     display: flex;
-    gap: 80px;
-}
-
-.headernaviconlist {
+    justify-content: flex-end;
+  }
+  
+  .headernaviconlist {
     display: flex;
+    list-style: none;
     gap: 20px;
-}
+    font-size: 22px;
+    color: blueviolet;
+  }
+
+  .headernaviconlistDesktop {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-size: 22px;
+    color: blueviolet;
+  }
+  
+  .headernaviconlistMobile {
+    display: none;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .headernav {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 20px 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      z-index: 10;
+    }
+  
+    .headernavlist {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .headericons {
+      justify-content: space-around;
+      width: 100%;
+      padding-top: 10px;
+    }
+  
+    .showMenu {
+      display: flex;
+    }
+
+    .headericons {
+        display: none; 
+      }
+    
+      .headernaviconlistMobile {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        font-size: 24px;
+        margin-top: 20px;
+        color: blueviolet;
+      }
+  }
+  

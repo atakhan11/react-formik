@@ -1,0 +1,466 @@
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_image {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("https://themewagon.github.io/purple-buzz/assets/img/banner-bg-01.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home_content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.home_content p:nth-of-type(1) {
+    width: 80%;
+    font-size: 3rem;
+    color: #6266ea;
+}
+
+.home_content p:nth-of-type(2) {
+    width: 80%;
+    font-size: 1rem;
+    color: rgb(90, 90, 90);
+}
+
+.home_content button {
+    width: 10rem;
+    height: 3rem;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #6266ea;
+    border: 1px solid #6266ea;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: #6266ea;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+
+    .home_content p:nth-of-type(1) {
+        width: 100%;
+        font-size: 1.5rem;
+        color: #6266ea;
+    }
+
+    .home_content p:nth-of-type(2) {
+        width: 100%;
+        font-size: 0.8rem;
+        color: rgb(90, 90, 90);
+    }
+
+    .home_content button {
+        width: 7rem;
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+
+}
+
+/* --------- Part 2 ----------- */
+
+.home_services {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+
+
+.home_service {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home_serviceleft {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+
+    i {
+        font-size: 2rem;
+        color: rgb(82, 82, 82);
+
+    }
+}
+
+.home_serviceright {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.home_serviceright h1 {
+    color: rgb(82, 82, 82);
+    font-size: 1.5rem;
+}
+
+.home_serviceright p {
+    width: 80%;
+    font-size: 1rem;
+    color: rgb(90, 90, 90);
+}
+
+.home_serviceright .home_serviceline {
+    width: 40%;
+    height: 5px;
+    background-color: #6266ea;
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .home_service {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .home_serviceleft {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .home_serviceright {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+}
+
+/* --------- Part 3 ----------- */
+
+.home_purple1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6266ea;
+    color: white;
+    padding: 3rem 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    button {
+        width: 10rem;
+        height: 3rem;
+        font-size: 1rem;
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: white;
+            color: #6266ea;
+        }
+    }
+}
+
+/* --------- Part 4 ----------- */
+
+.home_cards1 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.home_cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.home_card {
+    position: relative;
+    width: 20%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    gap: 1rem;
+    background-image: url("https://themewagon.github.io/purple-buzz/assets/img/services-01.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.home_card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 0;
+}
+
+.home_card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.home_card:hover::after {
+    transform: translateY(0);
+}
+
+.home_card button {
+    position: relative;
+    z-index: 2;
+    width: 7rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.home_card p {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 0.9rem;
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+
+    .home_cards1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding: 2rem 0;
+    }
+
+    .home_card {
+        width: 80%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 2rem;
+        gap: 1rem;
+        background-image: url("https://themewagon.github.io/purple-buzz/assets/img/services-01.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+
+}
+
+/* ------------ Part 5 ----------- */
+
+.home_purple2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6266ea;
+    color: white;
+    padding: 3rem 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    .home_purple {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+
+        i {
+            font-size: 2rem;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1rem;
+        }
+    }
+
+    button {
+        width: 10rem;
+        height: 3rem;
+        font-size: 1rem;
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            background-color: white;
+            color: #6266ea;
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+
+    .home_purple2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .home_purple {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+
+}
+
+
+/* ------------- Part 6 ----------- */
+
+.home_cards2 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.home_card2 {
+    width: 30%;
+    height: 400px;
+    display: flex;
+    background-image: url("https://themewagon.github.io/purple-buzz/assets/img/services-02.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.home_carditem {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    gap: 1rem;
+    position: relative;
+    z-index: 0;
+
+    background: #FFF;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    cursor: pointer;
+
+
+
+}
+
+.home_card2:hover .home_carditem {
+    background: #6266EA;
+    background: linear-gradient(0deg, rgba(98, 102, 234, 1) 0%, rgba(255, 255, 255, 0.62) 100%);
+}
+
+@media screen and (min-width: 300px) and (max-width: 576px) {
+
+    .home_cards2 {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .home_card2 {
+        width: 40%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 1rem;
+        overflow: hidden;
+
+        h1{
+            font-size: 1rem;
+        }
+
+        p{
+            font-size: 0.8rem;
+        }
+        
+    }
+    
+}

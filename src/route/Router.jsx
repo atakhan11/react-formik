@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from '../components/layout/Layout'
 import Contact from '../pages/contact/Contact'
+import Home from '../pages/home/Home'
 
 
 
@@ -10,10 +11,10 @@ const Router = () => {
    <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Contact />} />
+          <Route index element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          
         </Route>
-        
-        
       </Routes>
     </BrowserRouter>
   )
